@@ -71,7 +71,7 @@ app.post('/send-email', upload.single('img'), (req, res) => {
 	res.sendStatus(200);
 });
 
-const server = app.listen(8080, () => {
+const server = app.listen(80, () => {
 	console.log(`Express running -> PORT ${server.address().port}`);
 });
 
