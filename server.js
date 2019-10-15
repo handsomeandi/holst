@@ -54,7 +54,7 @@ app.post('/send-email', upload.single('img'), (req, res) => {
 		subject: `Новый покупатель`,
 		html: `<h1>Почта:</h1> <h3>${email}<h3> <br> <h1>Телефон:</h1> <h3>${phone}</h3> <br> <h1>Имя:</h1> <h3>${name}</h3> <br> <h1>Стиль:</h1> <h3>${style}</h3> <br> <h1>Размер:</h1> <h3>${size}</h3> <br> <img src="cid:siskakota" width="300" alt="photo"/>`,
 		attachments: [{
-			path: `${__dirname}\\${img.path}`,
+			path: `${__dirname}/${img.path}`,
 			cid: `siskakota`
 		}]
 	};
