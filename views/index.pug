@@ -1,0 +1,8 @@
+form(role='form' action='/send-email' method='post')
+  br(style='clear:both')
+  .form-group
+    input#subject.form-control(type='text' name='subject' placeholder='Subject' required='')
+  .form-group
+    textarea#message.form-control(type='textarea' name='message' placeholder='Message' maxlength='140' rows='7' required='')
+  .text-center
+    button#submit.btn.btn-primary.pull-right.btn-submit(type='submit' name='submit') Send
