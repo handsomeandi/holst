@@ -45,7 +45,7 @@
 	color:white;
 }
 #form-sec{
-	height: 800px;
+	height: 500px;
 	background-color: #2a4264;
 }
 #form-sec label{
@@ -88,7 +88,11 @@
 	border-radius: 20px;
 }
 .form-group .form-el{
-	margin-left: 9px;
+	margin-left: 21%;
+	width: 59%;
+}
+#form-sec label{
+	padding-left: 20%!important;
 }
 .select-style{
 	width: 100%;
@@ -125,7 +129,7 @@
 	color: white;
 }
 #comments{
-	height: 420px;
+	height: 20px;
 	background-image:linear-gradient( black, rgb(127,151,197));
 }
 #team .media{
@@ -173,7 +177,7 @@
 	height: 100px;
 	width: 100px;
 }
-#footer{
+/*#footer{
 	background-color: #333;
 	color: #fff;
 	padding: 10px;
@@ -182,7 +186,7 @@
 
 #footer p{
 	font-size: 20px;
-}
+}*/
 
 
 @media(max-width: 830px){
@@ -193,13 +197,16 @@
 		font-size: 15px!important;
 	}
 	#form-sec{
-		height: 900px;
+		height: 600px;
 	}
 	#team{
 		height: 900px;
 	}
 	#comments{
-		height: 1000px;
+		height: 800px;
+	}
+	.col{
+		display: inline-block;
 	}
 } 
 @media(max-width: 1420px){
