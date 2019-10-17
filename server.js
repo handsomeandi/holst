@@ -29,6 +29,7 @@ const bodyParser = require('body-parser');
 app.set('view engine', 'pug');
 app.use(express.static(__dirname + '/static'));
 app.use(bodyParser.urlencoded({extended: true}));
+var body_p = bodyParser.urlencoded({extended: true});
 app.use(bodyParser.json());
 
 const logJson = require('./log.json');
@@ -41,23 +42,31 @@ const transporter = nodeMailer.createTransport({
 	}
 });
 
-app.post('/send-email', upload.single('img'), (req, res) => {
-	const {email, phone, name, style, size} = req.body;
-	const img = req.file;
+const server = app.listen(8080, () => {
+	console.log(`Express running -> PORT ${server.address().port}`);
+});
 
-	console.log(`Got post: ${email}, ${phone}, ${name}, ${style}, ${size}`);
-	if (img) console.log('With image:', img);
-	else console.log('No image');
+app.post('/send-email', upload.single('img'), (req, res) => {
+// app.post('/send-email', function(req, res){
+	const {email, phone, name, style, size} = req.body;
+	// const {phone, name} = req.body;	
+	// const img = req.file;
+
+	// console.log(`Got post: ${email}, ${phone}, ${name}, ${style}, ${size}`);
+	// if (img) console.log('With image:', img);
+	// else console.log('No image');
+	// console.log(`${req.body}`);
 
 	const mailOptions = {
-		to: 'aivazovsky.print@gmail.com',
+		to: 'gooroochanel3@gmail.com',
 		subject: `Новый покупатель`,
-		html: `<h1>Почта:</h1> <h3>${email}<h3> <br> <h1>Телефон:</h1> <h3>${phone}</h3> <br> <h1>Имя:</h1> <h3>${name}</h3> <br> <h1>Стиль:</h1> <h3>${style}</h3> <br> <h1>Размер:</h1> <h3>${size}</h3> <br> <img src="cid:siskakota" width="300" alt="photo"/>`,
-		attachments: [{
-			path: `${__dirname}/${img.path}`,
-			cid: `siskakota`
-		}]
-	};
+		html: `<br> <h1>Телефон:</h1> <h3>${phone}</h3> <br> <h1>Имя:</h1> <h3>${name}</h3>`,
+		// html: `<h1>Телефон:</h1> <h3>${phone}</h3> <br> <h1>Имя:</h1> <h3>${name}</h3>`
+		// attachments: [{
+		// 	path: `${__dirname}/${img.path}`,
+		// 	cid: `siskakota`
+		// }]
+	}
 
 	transporter.sendMail(mailOptions, (error,info) => {
 		if (error){
@@ -65,14 +74,10 @@ app.post('/send-email', upload.single('img'), (req, res) => {
 		}
 		console.log("Message sent");
 
-		fs.unlinkSync(img.path);
+		// fs.unlinkSync(img.path);
 	});
 
 	res.sendStatus(200);
-});
-
-const server = app.listen(80, () => {
-	console.log(`Express running -> PORT ${server.address().port}`);
 });
 
 app.get('/', (req,res) => {
