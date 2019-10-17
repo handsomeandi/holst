@@ -50,39 +50,39 @@ section#form-sec
   .container
     form(method="POST", action="/send-email")#form
       .form-group
-        label(for='exampleFormControlInput1')
-        input#emailInput.form-control.form-el(type='email' name='email' placeholder='Ваш e-mail')
+        //- label(for='exampleFormControlInput1')
+        //- input#emailInput.form-control.form-el(type='email' name='email' placeholder='Ваш e-mail')
         label.col-form-label(for='example-tel-input') &Vcy;&vcy;&iecy;&dcy;&icy;&tcy;&iecy; &ncy;&ocy;&mcy;&iecy;&rcy; &tcy;&iecy;&lcy;&iecy;&fcy;&ocy;&ncy;&acy;
         input#phoneInput.form-control.form-el(type='tel' name='phone' value='+7')
-        label(for='exampleFormControlInput3') &Vcy;&vcy;&iecy;&dcy;&icy;&tcy;&iecy; &vcy;&acy;&shcy;&iecy; &icy;&mcy;&yacy;
+        label.col-form-label(for='exampleFormControlInput3') &Vcy;&vcy;&iecy;&dcy;&icy;&tcy;&iecy; &vcy;&acy;&shcy;&iecy; &icy;&mcy;&yacy;
         input#nameInput.form-control.form-el(type='text' name='name' placeholder='Ваше имя')
       .form-group.form-el.select-style
-        label(for='exampleFormControlSelect1') &Vcy;&ycy;&bcy;&iecy;&rcy;&icy;&tcy;&iecy; &scy;&tcy;&icy;&lcy;&softcy; &khcy;&ocy;&lcy;&scy;&tcy;&acy;
-        select#selectStyle.form-control(name='style')
-          option &Fcy;&ocy;&tcy;&ocy;&pcy;&iecy;&chcy;&acy;&tcy;&softcy;
-          option Instagram
-          option Love is...
-          option &Acy;&kcy;&vcy;&acy;&rcy;&iecy;&lcy;&softcy;
-          option &Gcy;&rcy;&acy;&ncy;&zhcy;
-          option &Dcy;&rcy;&icy;&mcy; &Acy;&rcy;&tcy;
-          option Pop-Art
-          option &Kcy;&acy;&rcy;&tcy;&icy;&ncy;&acy; &vcy; &ocy;&bcy;&rcy;&acy;&zcy;&iecy;
-          option &Rcy;&acy;&mcy;&kcy;&acy; &dcy;&lcy;&yacy; &kcy;&acy;&rcy;&tcy;&icy;&ncy;&ycy;
-      .form-group.form-el.select-style
-        label(for='exampleFormControlSelect1') &Vcy;&ycy;&bcy;&iecy;&rcy;&icy;&tcy;&iecy; &rcy;&acy;&zcy;&mcy;&iecy;&rcy; &khcy;&ocy;&lcy;&scy;&tcy;&acy;
-        select#selectSize.form-control(name='size')
-          option 30&khcy;40
-          option 40&khcy;50
-          option 40&khcy;60
-          option 50&khcy;70
-          option 60&khcy;80
-          option 70&khcy;90
-          option 90&khcy;120
-      .input-group.form-el
-        .custom-file
-          button.btn.btn-success(type='button') ВЫБРАТЬ ФАЙЛ ДЛЯ ХОЛСТА
-          input#inputFile.custom-file-input(type='file' required name='img' aria-describedby='inputGroupFileAddon04')
-        .input-group-append.form-el
+      //-   label(for='exampleFormControlSelect1') &Vcy;&ycy;&bcy;&iecy;&rcy;&icy;&tcy;&iecy; &scy;&tcy;&icy;&lcy;&softcy; &khcy;&ocy;&lcy;&scy;&tcy;&acy;
+      //-   select#selectStyle.form-control(name='style')
+      //-     option &Fcy;&ocy;&tcy;&ocy;&pcy;&iecy;&chcy;&acy;&tcy;&softcy;
+      //-     option Instagram
+      //-     option Love is...
+      //-     option &Acy;&kcy;&vcy;&acy;&rcy;&iecy;&lcy;&softcy;
+      //-     option &Gcy;&rcy;&acy;&ncy;&zhcy;
+      //-     option &Dcy;&rcy;&icy;&mcy; &Acy;&rcy;&tcy;
+      //-     option Pop-Art
+      //-     option &Kcy;&acy;&rcy;&tcy;&icy;&ncy;&acy; &vcy; &ocy;&bcy;&rcy;&acy;&zcy;&iecy;
+      //-     option &Rcy;&acy;&mcy;&kcy;&acy; &dcy;&lcy;&yacy; &kcy;&acy;&rcy;&tcy;&icy;&ncy;&ycy;
+      //- .form-group.form-el.select-style
+      //-   label(for='exampleFormControlSelect1') &Vcy;&ycy;&bcy;&iecy;&rcy;&icy;&tcy;&iecy; &rcy;&acy;&zcy;&mcy;&iecy;&rcy; &khcy;&ocy;&lcy;&scy;&tcy;&acy;
+      //-   select#selectSize.form-control(name='size')
+      //-     option 30&khcy;40
+      //-     option 40&khcy;50
+      //-     option 40&khcy;60
+      //-     option 50&khcy;70
+      //-     option 60&khcy;80
+      //-     option 70&khcy;90
+      //-     option 90&khcy;120
+      //- .input-group.form-el
+      //-   .custom-file
+        //-   button.btn.btn-success(type='button') ВЫБРАТЬ ФАЙЛ ДЛЯ ХОЛСТА
+        //-   input#inputFile.custom-file-input(type='file'  name='img' aria-describedby='inputGroupFileAddon04')
+        //- .input-group-append.form-el
       input(type='submit' value='ЗАКАЗАТЬ').btn.btn-primary
 section#products
   .container
@@ -155,7 +155,7 @@ section#comments
   h1.title &Ncy;&acy;&shcy;&acy; &kcy;&ocy;&mcy;&acy;&ncy;&dcy;&acy;
   .container
     .row.text-center
-      .col-sm-6.col-md-4
+      .col-sm-6
         .testimonial-box
           a(href='https://vk.com/maksim.taran01' target='_blank')
             img.img-responsive(src='img/team1.jpg' alt='' width='90')
@@ -167,9 +167,9 @@ section#comments
             span.glyphicon.glyphicon-star
           h4 &Mcy;&acy;&kcy;&scy;&icy;&mcy; &Tcy;&acy;&rcy;&acy;&ncy;
           p &Vcy;&lcy;&acy;&dcy;&iecy;&lcy;&iecy;&tscy; &mcy;&acy;&gcy;&acy;&zcy;&icy;&ncy;&acy;
-          p Есть вопросы? Напиши мне в ВК!
+          p Принимаю заказы на портреты)
       // End Col
-      .col-sm-6.col-md-4
+      .col-sm-6
         .testimonial-box
           a(href='https://vk.com/id485063994' target='_blank')
             img.img-responsive(src='img/team2.jpg' alt='' width='90')
@@ -181,24 +181,24 @@ section#comments
             span.glyphicon.glyphicon-star
           h4 &Acy;&dcy;&icy;&lcy;&iecy; &Mcy;&icy;&iecy;&dcy;&icy;&ncy;&ocy;&vcy;&acy;
           p &Kcy;&ocy;&ncy;&scy;&ucy;&lcy;&softcy;&tcy;&acy;&ncy;&tcy;
-          p Есть вопросы? Напиши мне в ВК!
+          p Отвечу на все ваши вопросы. Помогу выбрать картину
       // End Col
-      .col-sm-6.col-md-4
-        .testimonial-box
-          a(href='https://vk.com/id136945163' target='_blank')
-            img.img-responsive(src='img/team3.jpg' alt='' width='90')
-          .ratings-icons
-            span.glyphicon.glyphicon-star
-            span.glyphicon.glyphicon-star
-            span.glyphicon.glyphicon-star
-            span.glyphicon.glyphicon-star
-            span.glyphicon.glyphicon-star
-          h4 &Dcy;&iecy;&ncy;&icy;&scy; &Scy;&ycy;&chcy;&iecy;&vcy;
-          p &KHcy;&ucy;&dcy;&ocy;&zhcy;&ncy;&icy;&kcy;
-      // End Col
-section#footer
-  .container
-    p.text-center &copy; Made by Arthur for Maxim
+      //- .col-sm-6.col-md-4
+      //-   .testimonial-box
+      //-     a(href='https://vk.com/id136945163' target='_blank')
+      //-       img.img-responsive(src='img/team3.jpg' alt='' width='90')
+      //-     .ratings-icons
+      //-       span.glyphicon.glyphicon-star
+      //-       span.glyphicon.glyphicon-star
+      //-       span.glyphicon.glyphicon-star
+      //-       span.glyphicon.glyphicon-star
+      //-       span.glyphicon.glyphicon-star
+      //-     h4 &Dcy;&iecy;&ncy;&icy;&scy; &Scy;&ycy;&chcy;&iecy;&vcy;
+      //-     p &KHcy;&ucy;&dcy;&ocy;&zhcy;&ncy;&icy;&kcy;
+//-       // End Col
+//- section#footer
+//-   .container
+//-     p.text-center &copy; Made by Arthur for Maxim
 
 script(src="js/sendPost.js")
 script(src="https://cdn.jsdelivr.net/npm/sweetalert2@8")
