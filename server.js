@@ -51,7 +51,7 @@ app.post('/send-email', upload.single('img'), (req, res) => {
 	const {email, phone, name, style, size} = req.body;
 
 	const mailOptions = {
-		to: 'gooroochanel3@gmail.com',
+		to: 'aivazovsky.print@gmail.com',
 		subject: `Новый покупатель`,
 		html: `<br> <h1>Телефон:</h1> <h3>${phone}</h3> <br> <h1>Имя:</h1> <h3>${name}</h3>`
 	}
