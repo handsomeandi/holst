@@ -49,23 +49,11 @@ const server = app.listen(8080, () => {
 app.post('/send-email', upload.single('img'), (req, res) => {
 // app.post('/send-email', function(req, res){
 	const {email, phone, name, style, size} = req.body;
-	// const {phone, name} = req.body;	
-	// const img = req.file;
-
-	// console.log(`Got post: ${email}, ${phone}, ${name}, ${style}, ${size}`);
-	// if (img) console.log('With image:', img);
-	// else console.log('No image');
-	// console.log(`${req.body}`);
 
 	const mailOptions = {
 		to: 'gooroochanel3@gmail.com',
 		subject: `Новый покупатель`,
-		html: `<br> <h1>Телефон:</h1> <h3>${phone}</h3> <br> <h1>Имя:</h1> <h3>${name}</h3>`,
-		// html: `<h1>Телефон:</h1> <h3>${phone}</h3> <br> <h1>Имя:</h1> <h3>${name}</h3>`
-		// attachments: [{
-		// 	path: `${__dirname}/${img.path}`,
-		// 	cid: `siskakota`
-		// }]
+		html: `<br> <h1>Телефон:</h1> <h3>${phone}</h3> <br> <h1>Имя:</h1> <h3>${name}</h3>`
 	}
 
 	transporter.sendMail(mailOptions, (error,info) => {
@@ -73,8 +61,6 @@ app.post('/send-email', upload.single('img'), (req, res) => {
 			return console.log(error);
 		}
 		console.log("Message sent");
-
-		// fs.unlinkSync(img.path);
 	});
 
 	res.sendStatus(200);
